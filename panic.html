@@ -1,0 +1,164 @@
+---
+permalink: /portfolio/panic
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adrian Schmidt</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/big-portfolio.css">
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a href="/"><img src="/assets/images/name-light.svg" style="width:100%;"></a>
+        <a href="/#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div id="content">
+        <h1>Panic</h1>
+            <img src="/assets/images/futures.jpg" width="100%">
+        <h2>Origin & Adaption</h2>
+        <p>
+            The original concept for Panic was developed for the Creative AI Sydney conference by Dr Ben Swift and myself and was primarily programmed by Dr Swift. The program allowed the viewer to choose different AI models that could feed into each other. For example, the output from a voice-to-text AI could be fed into text-to-image AI, which could be fed into an image description model, and so on. It is a way to investigate the strengths and weaknesses of these AI models, and biases they may trend towards. I was, unfortunately, sick on the day we were presenting, but I heard that audiences enjoyed seeing how each AI model would pick up or ignore details from the previous.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+
+            Ben and I were asked if we could demonstrate generative AI models for the ANU School of Cybernetics Launch Exhibition ‘Australian Cybernetic: A Point Through Time’. The exhibit involves many creative computing displays from the 60s and 70s. We suggested Panic could be adapted as a modern accompaniment. 
+            <br>
+            <br>
+            To adapt Panic into an exhibit, we needed it to work un-facilitated and distributed over a larger area rather than contained to one screen. Looking for different ways to display the outputs, we found Vestaboards - modern internet-controlled split-flaps displays - an exciting and physical way to show text. They also suited the exhibit’s theme, bringing together old and new technology.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            Splitting tasks between Ben and me, I was in charge of hardware. This included the interface a viewer would use to input their prompt, the screens used, and internet connections for each device.
+        </p>
+
+        <h2>Designing the Terminal</h2>
+        <p>
+            The viewer of the artwork needed some way to input their prompt to begin looping AI models. I determined there were two main ways to do this:
+            <br>
+            <br>
+                1. A microphone using AI-powered speech-to-text.
+                2. A keyboard input.
+            <br>
+            <br>
+            Our priorities were to have input be as simple as possible with high accuracy. Discussing voice recognition software with my colleagues who research AI-voice recognition, they pointed out that recognition works poorly for dialects less represented in tech design. Although inaccuracies in AI text-to-speech would create interesting results, we thought allowing the viewer to test small changes and follow the compounding results was more important. Additionally, the environment would be noisy, so accurate voice recognition was unlikely to be achievable. As such, I chose a keyboard input and realised we could replace the enter key with a titular “PANIC!” button. 
+            <br>
+            Ben had a spare compact keyboard I could use to base my design off of. To prevent the user from exiting the display, I wanted to cover some of the keycaps to make them inaccessible. Using the photogrammetry application ‘Polycam’, I 3D scanned the keyboard to import it into the CAD program Fusion 360. Using a spare piece of acrylic, I laser-cut around the keys to test the placement of the keyboard and button.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            Testing this design with my colleagues, we found it was possible to type on the inset keys but needed more room for comfortably resting palms. As such, I new I needed a further ledge infant of the keyboard. We also found the single space-bar key confusing, so I designed and 3D-printed a space-bar key cap that could sit over both keys.
+        </p>
+
+        <h2>Programming & Prototyping</h2>
+        <p>
+            The Panic terminal needed access to a web browser, so I chose to use a Raspberry Pi 4 as the computer within the system. This also allowed me to wire the ‘PANIC!’ button into the GPIO pins, meaning I could control whether the internal light was on or off and detect when the button was pressed. I wrote a Python script that attaches the switch of the button to the enter key. This program could also turn the light off and time out the ability to enter a new prompt. I didn’t use this feature in the end, as we decided the time-out information was better displayed on the console screen. I then set the Raspberry Pi so that, when turned on, it would automatically run the script and open the terminal view in full screen. 
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            The red button came with a dim and central LED, but I wanted the button to be bright and consistently lit. I started by adding reflective tape around the inside of the button. Although this helped, it did not make a significant difference, so I replaced the printed paper within the button with vinyl-cut lettering, blocking less light. Finally, I added a 5V LED strip around the interior of the light. This was much brighter and more evenly lit, achieving my desired result. 
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            With the keyboard design tested, and Raspberry Pi and button ready, I needed to create the rest of the housing. I had access to a small monitor used during our online workshops and decided to use this as the screen. Partly inspired by the Cybersyn control room created by Cybernetician Stafford Beer (shown above), I designed the exterior in Fusion360. I would 3D-print the frame, and laser cut the flat panels to fill the frame. I could then mount the monitor to the frame, leaving some panels removable for easy access. 
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+        </p>
+
+        <h2>Fabricating the Terminal</h2>
+        <p>
+            Once designed, I split the frame into pieces I could 3D-print separately over a few days. Once the first few pieces were printed, I wanted to test the shape of the flat panels, as I had a limited supply of the final black acrylic sheet. I cut each panel out of box board and placed them within the first few 3D-printed pieces. Based on this prototype, I needed to adjust the button placement, add new holes for cables, and resize the keyboard cut-out. I then cut the final pieces of acrylic, ready for assembly.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            Once the pieces were 3D-printed, I glued them together with super glue and attached the fixed acrylic panels. I reinforced the weaker connections on the inner side with epoxy and filled any gaps with a plastic filler. Once set, I sanded the whole body and spray-painted it with matte black paint. 
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            With each component ready, I plugged the raspberry pi and the monitor into power, and stored the cables bending the monitor. Each piece can be accessed by removing either the keyboard panel, or the back panel.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+        </p>
+        <h2>Merging the Pieces</h2>
+        <p>
+            The whole system sits on a piece of acrylic sized to inset on a stand. I neatened the cables by zip-tying them to the back of the stand.
+            <br>
+            <br>
+            To finalise the setup, we attached three Vestaboards and televisions onto stands. I connected each to an ethernet cable and side-loaded web browsers to the televisions, so they could display the generated images as they came through.
+            <br>
+            <br>
+            After observing people use the terminal, I noticed that the sunken keys affected the ability to type quickly and that editing typos required deleting text until the typo was reached. To fix this, I uncovered all the keys and raised the keyboard, realising I could re-map the new keys to the numbers. I made the top of the keys using a vinyl cutter and added two arrow keys. I also swapped the semi-colon with an apostrophe, a punctuation mark a few people asked for. With these changes, viewers find it much easier to type their prompts.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+            Watching viewers type a prompt in, press ‘PANIC!’ and laugh as they see how impressive and surprising the models are has been very satisfying. Panic quickly demonstrates these AI models’ current strengths and weaknesses while being entertaining and awe-inspiring. Here’s an example for the prompt ‘A Group of Dogs wearing red Hats and a Bow’, displayed on a poster designed by graphic designer Ken Wheeler.
+            <figure>
+                <img src="/assets/images/futures.jpg" 
+                alt="Futures">
+                <figcaption>Testing titles</figcaption>
+            </figure>
+        </p>
+        <h2>Reflections and References</h2>
+        <p>
+            It was a great challenge creating this work in a short time period. I gained new skills using Fusion360, the vinyl cutter, and fabricating something for the public to physically interact with. It was also my first chance to use a Raspberry Pi over an Arduino, which helped me understand its strengths and weaknesses.
+            <br>
+            <br>
+            Many of my challenges for this project were around networks due to unexpected internet restrictions at the University. These were solved after trying multiple solutions but aren’t worth expanding on.
+            <br>
+            <br>
+            Designing and fabricating something like the terminal was new to me but went smoothly due to appropriate points of prototyping and refining. I’m very excited to further develop these skills on future projects.
+            <br>
+            <br>
+            We have plans for Panic to tour outside the School of Cybernetics in 2023. We will also use it in workshops on AI creative tools delivered at the ANU School of Cybernetics. 
+            <br><br>
+            <strong>Project team:</strong> Ben Swift, Adrian Schmidt.
+            <br>
+            <br>
+            <strong>References:</strong> I’ll work these out later, but probably:
+            Replicate, Stable diffusion, Australian Cybernetic, Cybersyn,  
+        </p>
+
+    </div>
+    
+</body>
+
+
+
+</html>
+    
+    
