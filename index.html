@@ -9,56 +9,142 @@
 </head>
 
 <body>
+    <div id="navbar" class="smaller-text">
+        <a href="/">
+            <h2>
+                <span class="l1">A</span><span class="w1">DRIAN</span>
+                <br>
+                <span class="l2">S</span><span class="w2">CHMIDT</span>
+            </h2>
+        </a>
+        
+        <div style="display:flex; flex-direction:row; height:60px">
+            <a href="/assets/adrian-schmidt-resume.pdf" style="font-weight:bold; padding: 0px 20px;">
+                Resume
+            </a>
+        <a href="#portfolio" style="font-weight:bold; padding: 0px 20px;">
+                Portfolio
+        </a>
+        <a href="#contact" style="font-weight:bold; padding: 0px 20px;">
+            Contact
+        </a>
 
-        <a href="#home"><img src="assets/images/name-light.svg" style="width:10%;"></a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
 
-    <div class="main">
-        I'm Adrian and I'm still building this website locally on my own machine. This will be updated... soon...
+        </div>
+    </div>
+
+    <div id="content">
+
+    <div class="about">
+        <div>
+        <h2 style="height: 110px;" class="big-text">
+            <span class="l1">A</span><span class="w1">BOUT</span>
+            <br>
+            <span class="l2">M</span><span class="w2">E</span>
+        </h2>
+        <div class="smaller-headshot">
+            <img src="/assets/images/headshot-small.jpg" style="width: 80%;">
+        </div>
+        <p>
+        HI! I'm Adrian Schmidt. I'm also a physicist, educator, designer and maker who is passionate about creating technologies for positive impact. I graduated from the Australian National University with a First Class Honours Degree in Science, researching the efficiency of quantum information storage in a rare-earth doped crystal. 
+        <br><br>
+        Building on six years as a science communicator at Questacon, I now work at the ANU’s School of Cybernetics where I design and deliver workshops, artefacts, and experiences to engender systems thinking to make technologies safe, sustainable, and responsible.
+        <br><br>
+        In my free-time I love to bake, try out new creative tools, and remind myself that I should probably go the gym.
+        </p>
+        </div>
+        <div class="bigger-headshot">
+            <img src="/assets/images/headshot.jpg" style="width: 100%;">
+        </div>
     </div>
 
 
+    <div id="portfolio">
+        <h2>
+            <span class="l1">P</span><span class="w1">ORTFOLIO</span>
+        </h2>
+        <div>
+            <div class="portfolio-top">
+                <div class="big">
+                    <a class ='noselect' style="width: 100%;" href="/portfolio/panic"><img src="/assets/images/panic-cover.jpg" style="width:100%; object-fit: contain;"></a>
+                    Panic is an interactive artwork I co-created that links generative AI tools to create feedback loops.
+                </div>
+                <div class="big">
+                    <a class ='noselect' style="width: 100%;" href="/portfolio/phonon-experiments"><img src="/assets/images/quantum-cover.jpg" style="width:100%; object-fit: contain;"></a>
+                    Quantum phonon experiments covers some of the research I did on storing quantum information in a rare-earth crystal.
+                </div>
+                <div class="big">
+                    <a class ='noselect' style="width: 100%;" href="/portfolio/system-of-a-sound"><img src="/assets/images/soas-cover.jpg" style="width:100%; object-fit: contain;"> </a>
+                    System of a Sound is a soundscape experience that turns live datastreams into music which I designed and built the interface for.
+                </div>
+            </div>
+
+
+            <button type="button" class="collapsible">See More Projects</button>
+            <div class="portfolio-bot">
+                <div class="small"><a class ='noselect' href="/portfolio/backwash"><img src="/assets/images/backwashcomp.png" style="width:100%;object-fit: contain; background-color: #333333;"></a>
+                Backwash Website
+                </div>
+                <div class="small"><a class ='noselect' href="/portfolio/cybernetic-star"><img src="/assets/images/star.jpg" style="width:100%;  object-fit: contain;"></a>
+                Cybernetic Star Coasters
+                </div>
+                <div class="small"><a class ='noselect' href="/portfolio/futures"><img src="/assets/images/futures.jpg" style="width:100%; object-fit: contain;"></a>
+                Futures Workshop Spinner
+                </div>
+                <div class="small"><a class ='noselect' href="/portfolio/woroni"><img src="/assets/images/woroni.jpg" style="width:100%;  object-fit: contain;"></a>
+                Woroni Magazine Graphic Design
+                </div>
+                <div class="small"><a class ='noselect' href="/portfolio/cybernetic-poster"><img src="/assets/images/poster.jpg" style="width:100%;   object-fit: contain;"></a>
+                Australian Cybernetic Interactive Poster
+                </div>
+            <div class="portolio-holder">
+    
+        </div>
+    </div>
+
+    <div id="contact">
+        <h2>
+            <span class="l1">C</span><span class="w1">ONTACT</span>
+        </h2>
+        <p>Please reach out if you have any questions or want to chat!</p>
+        <div class="contact">
+            <a href = "mailto: adrian.g.schmidt@gmail.com">Personal Email</a>
+            <a href = "mailto: adrian.schmidt@anu.edu.au">ANU Email</a>
+            <a href = "https://www.linkedin.com/in/adriangschmidt/">LinkedIn</a>
+        </div>
+    </div>
+
     
 </body>
 
 
-<!-- <script type="text/javascript" src="script.js"></script> -->
+<script src="/assets/js/words-anim.js"></script>
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var smalls = document.getElementsByClassName("small");
+    coll[0].addEventListener("click", function() {
+    this.classList.toggle("active");
+
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+          coll[0].innerHTML = "See More Projects";
+        } else {
+            var height = 0;
+            for (i=0; i<smalls.length; i++){
+                height+=smalls[i].clientHeight+80;
+                console.log(smalls[i].clientHeight)
+            }
+            console.log(height)
+          content.style.maxHeight = height + "px";
+          coll[0].innerHTML = "See Less Projects";
+        } 
+    });
+</script>
+
+
 
 </html>
     
-    
-
-
-
-<!-- 
-<h1>System of a Sound</h1>
-
-
-<h1>Cybernetic Star</h1>
-
-
-<h1>Backwash Site</h1>
-
-
-<h1>Futures Spinner</h1>
-
-
-<h1>Woroni Work</h1>
-
-
-<h1>Makerspace Designs</h1>
-
-
-<h1>OTL Cards</h1> -->
-
-
-
-</body>
-</html>
-
-
-
-<!-- this was very helpful https://codepen.io/vincentorback/pen/zxRyzj 
-    as was this https://www.w3schools.com/howto/howto_css_fixed_menu.asp
--->

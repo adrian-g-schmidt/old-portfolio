@@ -1,0 +1,177 @@
+---
+permalink: /portfolio/phonon-experiments
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adrian Schmidt</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/big-portfolio.css">
+</head>
+
+<body>
+
+    <div id="navbar" class="smaller-text">
+        <a href="/">
+            <h2>
+                <span class="l1">A</span><span class="w1">DRIAN</span>
+                <br>
+                <span class="l2">S</span><span class="w2">CHMIDT</span>
+            </h2>
+        </a>
+        
+        <div style="display:flex; flex-direction:row; height:60px">
+            <a href="/assets/adrian-schmidt-resume.pdf" style="font-weight:bold; padding: 0px 20px;">
+                Resume
+            </a>
+        <a href="/#portfolio" style="font-weight:bold; padding: 0px 20px;">
+                Portfolio
+        </a>
+        <a href="/#contact" style="font-weight:bold; padding: 0px 20px;">
+            Contact
+        </a>
+
+
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="cover" style="background-image: url('/assets/images/phonons/phonon-banner.jpg');">
+            <img id="title-small" src="/assets/images/phonons/quantum-text.svg">
+
+            <figure>
+                <img width="100%" src="/assets/images/phonons/rod-render-plain.png">   
+                <figcaption>A 3D model of the experimental rod set up.
+                </figcaption>
+            </figure>
+
+            <p>
+            <img id="title-big" src="/assets/images/phonons/quantum-text.svg">
+            <strong>Role:</strong> Experiment Design, Honours Student.
+            <br><br>
+            <strong>Tools:</strong> Python, Illustrator, iPad for sketching.
+            <br><br>
+            <strong>Description:</strong> The quantum phonon experiments are part of the research I did for my honours project. The main goal of these experiments was to test whether a particular crystal (Er<sup>3+</sup>:Y<sub>2</sub>SiO<sub>5</sub>) would be suitable for holding large amounts of quantum information. Quantum vibrations (phonons) can form when a crystal is excited when putting in information using a laser. These phonons could interfere with the other information being stored. Knowing if phonons occur and their impact in this crystal is vital for understanding the viability of using it in future quantum devices. 
+            </p>
+        </div>
+
+        <div id="study">
+
+        <h2>
+            <span class="l1">B</span><span class="w1">ACKGROUND <i>&</i></span>
+            <br>
+            <span class="l2">M</span><span class="w2">OTIVATIONS</span>
+        </h2>
+        <p>
+            For large quantum networks, where quantum computers are connected across a distance, the information from one computer needs to travel to the other. Light diminishes when travelling across a cable or through the air, so it must be boosted along the way. Measuring quantum information changes it, so a method is required to enhance a diminished quantum signal without measuring it. 
+            <figure>
+                <img src="/assets/images/phonons/wave-collapse.png" 
+                alt="A quantum wave function before and after being measured. ">
+                <figcaption>A quantum wave function before and after being measured. To boost the signal of qubit requires copying its wavefunction without measurement. (https://bcachemistry.wordpress.com/2013/11/14/introduction-to-quantum-mechanics/)
+                </figcaption>
+            </figure>
+            One approach is to, using a laser, put the information into a medium that can hold it for a moment and then spit the information back out without measuring it. Much of the research at the time was about refining the efficiency of storing a single quantum bit of information (a qubit). In the future, these materials will need to store significantly more qubits. A commonly suggested way to do this is by holding the qubits next to each other in the crystal (spatial multiplexing). 
+            <figure>
+                <img src="/assets/images/phonons/spatial-multiplexing.png" 
+                alt="A rendering of spatial multiplexing in a crystal, where many lasers store information at different sections of the crystal.">
+                <figcaption>A rendering of spatial multiplexing in a crystal, where many lasers store information at different sections of the crystal.
+                </figcaption>
+            </figure>
+            A material of interest for our research groups is Er<sup>3+</sup>:Y<sub>2</sub>SiO<sub>5</sub> (Erbium doped Yttrium Orthosilicate). This is because it has efficiently held information using a wavelength of light compatible with fibre-optic cables. My research was about understanding whether the excited atoms in the material formed phonons and how those phonons would affect the other excited atoms. I needed to design and execute an experimental setup that would allow me to do this. My Honours supervisors, Dr Rose Ahlefeldt, Associate Professor Matthew Sellars, and a PhD student, James Stuart, supported me in understanding background information and constraints and setting up and running the experiment. 
+        </p>
+
+        <h2>
+            <span class="l1">D</span><span class="w1">ESIGN</span>
+            <br>
+            <span class="l2">R</span><span class="w2">EQUIREMENTS</span>
+        </h2>        <p>
+            There were several constraints to measuring how phonons occurred in the crystal. The crystal needed to be at very low temperatures and under a magnetic field, as these are the conditions where qubits could be held at the highest efficiency. In our lab, these conditions require setting the crystal onto a metre-long rod, directed down to the bottom of a 1m tall tank (called a cryostat). The cryostat is then placed under a vacuum, filled with liquid nitrogen, and then liquid helium to reach 1.7 K (-456℉). We would then turn on a large electromagnet to apply a magnetic field.
+            <figure>
+                <img src="/assets/images/phonons/cryo-venting.jpg" 
+                alt="An image of the cryostat used, while venting off liquid nitrogen.">
+                <figcaption>An image of the cryostat used, while venting off liquid nitrogen.
+                </figcaption>
+            </figure>
+            I required two lasers to excite the crystal and measure its change. For taking measurements, one laser must reach the crystal and then enter a detector. The second laser would then excite the crystal and potentially create phonons. There is a window at the bottom of the cryostat where laser light can enter and leave.
+            <figure>
+                <img src="/assets/images/phonons/laser-setup.jpg" 
+                alt="The laser setup underneath the cryostat. The window is above the hole visible at the top, and is approximately 7cm wide.">
+                <figcaption>The laser setup underneath the cryostat. The window is above the hole visible at the top, and is approximately 7cm wide.
+                </figcaption>
+            </figure>
+            The crystal was very small - 3x4x5 mm- and needed to be placed at one of a few orientations. Other orientations result in the crystal being aligned differently with the magnetic field, changing the frequencies atoms can be at and the ability to store information efficiently. We did want to slightly shift the frequencies though, as this could give information about the frequency of the phonons that occur. The two main ways to do this are rotating the crystal while in the cryostat or increasing and decreasing the magnetic field. We also wanted to test how the phonons change as they travel further distances. This information would help us understand what type of phonons are occurring, how far apart qubits would need to be stored, and develop potential mitigation techniques. 
+        </p>
+
+        <h2>
+            <span class="l1">E</span><span class="w1">XPERIMENT</span>
+            <br>
+            <span class="l2">D</span><span class="w2">ESIGN</span>
+        </h2>        <p>
+            For the rod setup, a mirror needed to be placed on the far side of the crystal for measurement. This meant the laser would pass through the window and crystal and hit the mirror. The light would then reflect back through the crystal and window, entering the detector. The part holding the crystal would therefore need a gap so the laser could pass through.  
+            <br><br>
+            Between the two options of changing the magnetic field, and rotating the crystal, changing the magnetic field required more significant changes to the existing experimental setup. This meant I chose to turn the crystal while it was in the cryostat. The team had two attocubes available that rotate up to 3 degrees under very low temperatures and pressures. The attocubes don't have a built-in rotation measurement due to variations depending on the conditions. As such, I determined the rotation by measuring the distance of a laser's reflection off the crystal's face. The crystal needed to stay at the exact location while rotating, which defined its height above the platform. Unlike the crystal, the mirror needed to remain fixed, as moving it would reflect the measurement laser away from the detector.            
+            <figure>
+                <img src="/assets/images/phonons/attocubes.png" 
+                alt="A diagram of the attocubes and their rotational range.">
+                <figcaption>A diagram of the attocubes and their rotational range.
+                </figcaption>
+            </figure>
+            To change the distance between the two lasers, one laser was placed on an adjustable platform underneath the cryostat, so I could vary its position. I needed the second laser to be able to overlap with the first on the crystal, so I used a particular type of mirror called a beam-splitter. This allowed me to change the distance between the lasers to see how the phonons travelled over different lengths. This also decided the orientation of the crystal, so I could have as great a range of distances available for testing. 
+            <figure>
+                <img src="/assets/images/phonons/laser-diagram.svg" 
+                alt="Simplified experimental setup diagram, showing how the two lasers can overlap on the crystal in the cryostat.">
+                <figcaption>Simplified experimental setup diagram, showing how the two lasers can overlap on the crystal in the cryostat.
+                </figcaption>
+            </figure>
+            Combining these requirements, I designed a platform to mount the crystal on that attached to the attocubes for rotation and the rod. It would hold a mirror and the crystal at a particular height, rotating the crystal separately from the mirror. And it would have a hole so light could travel through the crystal to the mirror and be reflected back into a detector. I designed the specification for these two metal parts and they were manufactured by the Technical Officer. 
+            <figure>
+                <img src="/assets/images/phonons/rod-render-labelled.png" 
+                alt="A 3D-render of the rod setup, with the crystal orientation shown by the axis, with green arrows indicating the direction of the magnetic field, and blue arrows the direction of rotation.">
+                <figcaption>A 3D-render of the rod setup, with green arrows indicating the direction of the magnetic field, and blue arrows the direction of rotation. 
+                </figcaption>
+            </figure>
+            The experimental setup did not work the first time in the cryostat. Upon removal, I found the glue underneath the mirror had cracked under cold conditions. I re-glued the mirror and taped around it to ensure the mirror position remained fixed. After re-aligning the lasers, the experimental setup worked, with the laser successfully going into the crystal, hitting the mirror, and reflecting back into the detector. The second laser also successfully travelled along the crystal, and its effects could be seen in the measurements.
+        </p>
+
+        <h2>
+            <span class="l1">R</span><span class="w1">ESULTS <i>&</i></span>
+            <br>
+            <span class="l2">R</span><span class="w2">EFLECTIONS</span>
+        </h2>        <p>
+            From my experiments, I did find that phonons were occurring in this crystal, and several features of those phonons, including a frequency range, lifetime, and way the phonons were propagating. I learned so much from designing, performing, and analysing these experiments. The extreme conditions required imposed many boundaries on how my design was be implemented. It was satisfying to design a solution on paper, calculate all the exact distances and angles needed, and see it be manufactured into something physical that with worked with only small additional changes. 
+
+            Although I've focussed primarily on the experimental design, I have written in detail about the findings in my Honours thesis, which you can read <a href="/assets/adrian-schmidt-honours-thesis.pdf">here</a>.
+            <figure>
+                <img src="/assets/images/phonons/final-rod.jpg" 
+                alt="A photo of the final rod set up">
+                <img src="/assets/images/phonons/final-rod-under.jpg" 
+                alt="A photo from underneath the rod set up, showing the crystal and mirror">
+                <figcaption>An image of the final rod, and the view of the crystal and mirror from underneath. The wires are used to control the attocubes, and take measurements of temperature.
+                </figcaption>
+            </figure>
+            <br><br>
+            <strong>Project team:</strong> Adrian Schmidt, Rose Ahlefeldt, Matt Sellars, James Stuart
+            <br>
+            <br>
+        </p>
+
+        <div style="text-align: center; padding-bottom: 50px; font-size: 20px;">
+        <a class ='noselect' href="/#portfolio">
+            Return to Portfolio
+        </a>
+        </div>
+
+
+        </div>
+    </div>
+    
+</body>
+
+
+<script src="/assets/js/words-anim.js"></script>
+
+
+</html>

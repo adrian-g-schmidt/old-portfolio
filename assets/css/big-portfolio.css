@@ -1,0 +1,288 @@
+body {
+    margin:0;
+    background-color: #eeeeee;
+    color: #111111;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: lighter;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+h1{
+  font-weight: bold;
+}
+
+#content{
+  position: relative;
+  top: 60px;
+}
+
+#study{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.paragraph{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 200px;  
+}
+
+figure img{
+  width:100%;
+  max-width: 400px;
+}
+
+figure video{
+  width:100%;
+  max-width: 400px;
+}
+
+p{
+  font-weight: lighter;
+}
+
+figcaption{
+  font-style: italic;
+}
+
+figure{
+  text-align: center;
+}
+
+#cover{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1.6fr 1fr;
+  grid-gap: 20px;
+  padding-left:10%;
+  padding-right:10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-size: cover;
+  color:#eeeeee;
+  text-shadow: 1px 1px 1px #111111;
+}
+
+#cover-quick{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding-left:30%;
+  padding-right:30%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-size: cover;
+}
+
+
+
+/* The navigation bar */
+#navbar {
+  overflow: hidden;
+  /* background: linear-gradient(rgba(238,238,238,1),95%, rgba(238,238,238,0)); */
+  background: rgba(238,238,238,1);
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Links inside the navbar */
+#navbar a {
+
+  display : flex;
+  align-items : center;
+  text-decoration: none; /* remove underline */
+	color: inherit; /* remove blue */
+  height: 60px;
+}
+
+
+#navbar h2{
+  padding-left:20px;
+  padding-top: 7px;
+}
+
+#content{
+  position: relative;
+  top: 60px;
+}
+
+/* Change background on mouse-over */
+#navbar a:hover {
+  background: #ddd;
+}
+
+#navbar h2{
+  margin: 0;
+  height:60px;
+  width: 120px;
+}
+
+
+.w1.start{
+  animation: 1s ease-out 0s 1 slideInFromLeftTop;
+}
+
+i{
+  font-weight: 100;
+}
+
+h2{
+  overflow:  hidden;
+  height: calc(var(--scaling)*145px);
+  margin-top: -60px;
+  padding-top: 80px;
+}
+
+
+a{
+  color: inherit; /* remove blue */
+}
+
+
+.w2.start{
+  animation: 1s ease-out 0s 1 slideInFromLeftBot;
+}
+
+
+
+.l1{
+  font-size: calc(var(--scaling) * 100px); 
+  font-weight: normal;
+}
+.w1{
+  font-size: calc(var(--scaling) * 50px); 
+  transform: translate(0px, -60%);    
+  display:  inline-block;
+}
+.l2{
+  font-weight: normal;
+  font-size: calc(var(--scaling) * 100px); 
+  position:relative; 
+  transform: translate(calc(var(--scaling) * 26px), -58%);    
+  display:  inline-block;
+}
+
+.w2{
+  font-size: calc(var(--scaling) * 50px); 
+  transform: translate(calc(var(--scaling) * 25px), -179%);    
+  display:  inline-block;
+}
+
+@keyframes slideInFromLeftTop {
+  0% {
+    transform: translate(-100%, -60%);   
+    opacity: 0; 
+  }
+  100% {
+    transform: translate(0px, -60%);    
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeftBot {
+  0% {
+    transform: translate(-100%, -180%);    
+    opacity: 0; 
+  }
+  100% {
+    transform: translate(calc(var(--scaling) * 25px), -179%);    
+    opacity: 1;
+  }
+}
+
+.smaller-text{
+  --scaling: 0.3;
+}
+
+
+:root {
+  --scaling: 0.7; 
+}
+
+#title-big{
+  display: block;
+  margin-bottom: 20px;
+}
+
+#title-small{
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  #study{
+    position: relative;
+    top: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #cover{
+    grid-template-columns: 1fr; 
+  }
+  #title-big{
+    display: none;
+  }
+  
+  #title-small{
+    display: block;
+  }
+  #cover-quick{
+    padding-left:20%;
+    padding-right:20%;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --scaling: 0.5; 
+  }
+
+  #cover{
+    grid-template-columns: 1fr; 
+  }
+
+  #title-big{
+    display: none;
+  }
+  
+  #title-small{
+    display: block;
+  }
+  #cover-quick{
+    padding-left:10%;
+    padding-right:10%;
+  }
+
+}
+
+
+@media only screen and (min-width: 1500px) {
+  figure img{
+    width:100%;
+    max-width: 700px;
+  }
+  
+  figure video{
+    width:100%;
+    max-width: 700px;
+  }
+  
+}
+
+

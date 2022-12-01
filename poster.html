@@ -1,0 +1,134 @@
+---
+permalink: /portfolio/cybernetic-poster
+---
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adrian Schmidt</title>
+    <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/big-portfolio.css">
+</head>
+
+<body>
+
+    <div id="navbar" class="smaller-text">
+        <a href="/">
+            <h2>
+                <span class="l1">A</span><span class="w1">DRIAN</span>
+                <br>
+                <span class="l2">S</span><span class="w2">CHMIDT</span>
+            </h2>
+        </a>
+        
+        <div style="display:flex; flex-direction:row; height:60px">
+            <a href="/assets/adrian-schmidt-resume.pdf" style="font-weight:bold; padding: 0px 20px;">
+                Resume
+            </a>
+        <a href="/#portfolio" style="font-weight:bold; padding: 0px 20px;">
+                Portfolio
+        </a>
+        <a href="/#contact" style="font-weight:bold; padding: 0px 20px;">
+            Contact
+        </a>
+
+
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="cover-quick">
+            <h1 id="title-small">Australian Cybernetic Poster</h1>
+        
+            <figure>
+              <img src="/assets/images/shorter/poster-pic.jpg" 
+              alt="An image of a person interacting with the poster displayed on the screen">
+              <figcaption>A person interacting with the Australian Cybernetic Poster displayed on a screen
+              </figcaption>
+            </figure>
+
+            <div>
+            <p>
+              <h1 id="title-big">Australian Cybernetic Poster</h1>
+              <strong>Role:</strong> Interaction development <br><br>
+              <strong>Description:</strong> I developed the interactive component of the Australian Cybernetic: A Point Through Time artwork designed by KopiSu. They created a set of animations to be displayed on a vertical screen, and proposed that it could be dynamic based on the distance of the viewer. I did this by using PoseNet - a model that assigns a pixels position to different parts of a body on camera. Although I experimented with models that make a three dimensional estimate, I had better results using the two dimensional data and measuring the pixel count between the two shoulders. After installing, I adjusted the variables to suit the environment, and different user’s shoulder widths. When the viewer gets close enough to fully fill the page with pink, a new animation plays. When a person is not detected by the camera, a passive animation plays that can quickly transition over to the dynamic state.
+            </p>
+            </div>
+
+            <figure>
+              <video width="100%" controls loop>
+                <source src="/assets/images/shorter/poster-video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>           
+              <figcaption>The installation reacts and changes based on your percieved distance.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img src="/assets/images/shorter/poster-tracking.jpg" 
+              alt="A person with red dots overlayed on parts of their body">
+              <figcaption>A screen capture showing the highlighted pose areas. I estimate distance from the camera by the distance between the two shoulder points.
+              </figcaption>
+            </figure>
+
+        </div>
+
+
+        <div style="text-align: center; padding-bottom: 50px; font-size: 20px;">
+        <a class ='noselect' href="/#portfolio">
+            Return to Portfolio
+        </a>
+        </div>
+
+
+        </div>
+    </div>
+    
+</body>
+
+
+<script src="/assets/js/words-anim.js"></script>
+
+
+</html>
+    
+    
+
+
+
+<!-- 
+<h1>System of a Sound</h1>
+
+
+<h1>Cybernetic Star</h1>
+
+
+<h1>Backwash Site</h1>
+
+
+<h1>Futures Spinner</h1>
+
+
+<h1>Woroni Work</h1>
+
+
+<h1>Makerspace Designs</h1>
+
+
+<h1>OTL Cards</h1> -->
+
+<script>
+    $('.carousel').carousel({interval:false})
+</script>
+
+</body>
+</html>
+
+
+
+<!-- this was very helpful https://codepen.io/vincentorback/pen/zxRyzj 
+    as was this https://www.w3schools.com/howto/howto_css_fixed_menu.asp
+-->
