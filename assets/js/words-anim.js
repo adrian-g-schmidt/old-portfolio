@@ -39,6 +39,12 @@ var headings = document.querySelectorAll('h2');
 
 window.onresize = resizeAdjust;
 
+window.onscroll = function (e) {  
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        document.getElementById("links").style.display="none" 
+    }
+} 
+
 function resizeAdjust(){
     if (window.matchMedia("(min-width: 700px)").matches) {
         document.getElementById("links").style.display = "flex"
