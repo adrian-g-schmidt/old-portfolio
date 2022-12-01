@@ -8,7 +8,7 @@ permalink: /portfolio/system-of-a-sound
 
 <head>
     <title>Adrian Schmidt</title>
-    <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="/images/icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/big-portfolio.css">
 </head>
@@ -79,25 +79,25 @@ permalink: /portfolio/system-of-a-sound
             <span class="l2">M</span><span class="w2">USIC</span>
         </h2>
         <p>
-            System of a Sound is an experience created as part of the Birch Research Project at the ANU School of Cybernetics. The project investigates how visitors and occupants can understand built environments through their impact on and from the many systems of people, technology, and the environment they are connected to. 
+            System of a Sound is an experience created as part of the Birch Research Project at the ANU School of Cybernetics. The research project investigates peoples connection to place, and System of a Sound explores linking data to emotion to music. 
             <br><br>
-            The intellectual core of the artwork is Stewart Brand and Brian Eno’s “Pace Layers”. The Pace Layers describe the world in layers of stability, with the more stable layers supporting the more fluid ones. The upper layers can change more rapidly due to the support of the layers they are built upon.             <figure>
-                <img src="/assets/images/soas/pace-diagram.jpg" 
+            The intellectual core of the experiences is Stewart Brand and Brian Eno’s “Pace Layers”. The Pace Layers describe the world in layers of stability, with the more stable layers supporting the more fluid ones. The upper layers can change more rapidly due to the support of the layers they are built upon. 
+            <figure>
+            <img src="/assets/images/soas/pace-diagram.jpg" 
                 alt="A diagram showing layers of a global system ordered from less stable to more stable">
                 <figcaption>Pace Layering - diagram by Stewart Brand, from The Clock of the Long Now, 1999.
                 </figcaption>
             </figure>
-
-            System of a Sound uses the Pace Layers to investigate our building through different data types, giving the viewer an understanding of the buildings and their context through a new medium.
+            System of a Sound uses the Pace Layers to investigate our building through different data types, giving the viewer an understanding of the buildings and their context through the medium of sound.
             <figure>
                 <img src="/assets/images/soas/proposal.png" 
                 alt="A diagram of concentric circle with data labels">
                 <figcaption>The original diagram for the visuals of System of a Sound - diagram by Josh Andres, School of Cybernetics.
                 </figcaption>
             </figure>
-            From this starting point, System of a Sound was commissioned in collaboration with the music production group Uncanny Valley. Uncanny Valley is a music production group that uses emerging technologies to generate dynamic and modern sound-scapes and songs. 
+            System of a Sound was commissioned in collaboration with the music production group Uncanny Valley, which uses emerging technologies to generate dynamic and modern sound-scapes and songs. 
             <br><br>
-            I joined the project to help design and implement the visual components of the work. Working between the researchers and artists, I prototyped, iterated, and built a display interface that users could interact with to understand the data and contribute to the music.         
+            I joined the project to help design and implement the visual components of the work. Working with the researchers and artists, I prototyped, iterated, and built the display interface for users to interact with, understand the data, and contribute to the music. 
         </p>
 
         <h2>
@@ -106,27 +106,29 @@ permalink: /portfolio/system-of-a-sound
             <span class="l2">D</span><span class="w2">ISPLAY</span>
         </h2>       
         <p>
-            I started by experimenting with ways data could be displayed over a circle on a vertical screen in the School’s lobby. Each layer would be placed within another and could be highlighted to show more information. They could be rotated using gestures to view the data over time. A viewer would interact with each layer to affect the music, with each layer reacting like a liquid. The layers would have a viscosity that varied depending on the “pace” of that layer.
+            Experimenting with ways data could be displayed over a circle on a vertical screen, I created the following designs. Each layer is placed within another and can be highlighted to show more information. They can be rotated using gestures to view the data over time. A viewer interacting with each layer affects the music, with each layer acting like a fluid. The layers would have a viscosity that varied depending on the “pace” of that layer.
             <figure>
+                <div class="img-grid">
                 <img src="/assets/images/soas/circle-draft.jpg" 
                 alt="The un-highlighted state">
                 <img src="/assets/images/soas/circle-draft-highlight.jpg" 
                 alt="The highlighted state">
+                </div>
                 <figcaption>A mock-up of the un-highlighted state, where a viewer would create music, and the highlighted state, where the viewer can read the underlying data.
                 </figcaption>
             </figure>
-            The project lead desired a more direct representation of time in the design, and suggested using a spiral to display the information. I tested this idea using Python to take information and project it onto a spiral, making the following two plots. The data displayed are Canberra CO2 measurements, electricity usage of the Birch Building, and temperature data of Canberra.
+            The project lead desired a more direct representation of time in the design, and suggested using a spiral to display the information. I tested this idea using Python to take information and project it onto a spiral, making the following two plots. The three data feeds displayed are Canberra CO<sub>2</sub> measurements, electricity usage of the Birch Building, and temperature data of Canberra. As most of our intended data types increase/decrease in a near linear fashion we found these visualisations obscured the trends.
             <figure>
+                <div class="img-grid">
                 <img src="/assets/images/soas/python-lines.png" 
                 alt="Data projected over a spiral with a running line">
                 <img src="/assets/images/soas/python-dots.png" 
                 alt="Data represented over a spiral by circle sizes">
+                </div>
                 <figcaption>Plotting data over a spiral, with information displayed by varying the line height, and by the size of each circle.
                 </figcaption>
             </figure>
-            The visualisations helped us realise that this display method would obscure the trends, as most of our intended data types increase/decrease close to linearly. As such, we started investigating alternative ways to display the data. 
-            <br><br>
-            A programmer with Uncanny Valley had been experimenting with the large language model GPT-3 and found that it could make insightful and descriptive data representations. GPT-3 is trained off 45TB of text data to predict the most likely next word in a sentence, and by giving it the data, we could get text descriptions of the data. He suggested going back to the original Pace layers and using a horizontal screen instead of a vertical one. I then created the following design, where each line of text moves with a speed corresponding to that layer, which was all agreed was the right approach to build upon. 
+            A programmer with Uncanny Valley had been experimenting with the large language model GPT-3 and found that it could make insightful and descriptive data representations. GPT-3 is trained off 45TB of text data to predict the most likely next word in a sentence, and by giving it the data, we could get text descriptions of the data. He suggested going back to the original Pace layers and using a horizontal screen instead of a vertical one. Based on his suggestions, I created the following design, where each line of text moves with a speed corresponding to that layer. We all agreed this was the right approach for the project. 
             <figure>
                 <img src="/assets/images/soas/pace-draft.jpg" 
                 alt="A mock-up of the display, using the AI Generated text descriptions of each layers data.">
@@ -141,18 +143,15 @@ permalink: /portfolio/system-of-a-sound
             <br>
             <span class="l2">S</span><span class="w2">OUND</span>
         </h2>        <p>
-            With our visual concept determined, we needed to investigate how the viewer could interact to create music using gesture tracking. Our collaborators suggested using a grid of notes, either overlayed or on top, that the viewer would highlight to play different sounds. 
-            <figure>
-                <img src="/assets/images/soas/above.jpg" 
-                alt="A grid of notes above the design">
-                <img src="/assets/images/soas/overlayed.jpg" 
-                alt="A grid of notes overlayed on the design">
-                <figcaption>Un-stylized initial layout concepts for the music interactions, with the pads on top, and overlayed. 
-                </figcaption>
-            </figure>
-            Iterating on these ideas, I began looking for ways to incorporate the interaction into the pace layer design. After some iteration, I was inspired by the strings on a guitar. They are familiar to many users and would match the original lines separating each pace layer. The lower lines would be thicker, playing lower notes and vibrating for longer. In contrast, the thinner strings would play higher notes and quickly stop vibrating, matching that layer’s dynamics and ‘pace’.
-
-            I created the interaction and animation for the strings in p5.js. Informed by my studies in Physics and Statistics, the string is a combination of Gaussian distributions and Sin waves. Once operating, I began refining the string dynamics by editing the function and varying parameters so the line would feel dynamic and like you were physically plucking it. The hand movement is represented by a circle to be as least obtrusive to the display.            
+            We explored different way the viewer could interact to create music using gesture tracking. Building on our collaborators ideas of using a grid of notes, I looked for ways to incorporate the interaction into the pace layer design. The final design was inspired by the strings on a guitar. The lower lines are thicker, playing lower notes and vibrating for longer. The thinner strings play higher notes and quickly stop vibrating, matching that layer’s faster ’pace’.
+            <br><br>
+            I created the interaction and animation for the strings in p5.js. I designed the string as a combination of Gaussian distributions and Sin waves. Once I had a functional model, I refined the string dynamics so the line would feel like you were physically plucking it. The equation of the string dynamics is:
+            <br><br>
+            <img src="/assets/images/soas/equation.svg" style="width: 100%;">
+            <br><br>
+            Where <img src="/assets/images/soas/x.svg"> is position along the string, <img src="/assets/images/soas/hx.svg"  style="transform: translate(0px,2px)"> and <img src="/assets/images/soas/hy.svg" style="transform: translate(0px,5px)"> are the hand's x and y positions respectively, <img src="/assets/images/soas/omega.svg"> is the wavelength, <img src="/assets/images/soas/gauss.svg" style="transform: translate(0px,5px)"> is a normalised Gaussian probability distribution function at position <img src="/assets/images/soas/x.svg">, <img src="/assets/images/soas/tmax.svg" style="transform: translate(0px,2px)"> is the time for the string to stop vibrating, <img src="/assets/images/soas/t.svg"> is the current time, <img src="/assets/images/soas/s.svg"> is the spread speed, <img src="/assets/images/soas/d.svg"> is the direction, and <img src="/assets/images/soas/o.svg"> is the y offset.
+            <br><br>
+            The viewer’s hand position is represented by a circle. A recording of the string is shown below. 
             <figure>
                 <img src="/assets/images/soas/animation.jpg" 
                 alt="6 images breaking down the animation of the strings">
@@ -173,14 +172,14 @@ permalink: /portfolio/system-of-a-sound
                 <figcaption>Four skins of the running interface, created to demonstrate ease of adjusting the design
                 </figcaption>
             </figure>
-            From these designs, the project lead realised we could better evoke the Pace layers by bringing in more elements from the original diagram. These included the curve, upper and lower lines, and category descriptions. We then brought in the original font and an inverted colour scheme. 
+            From these designs, we decided to bring in more elements from the original Pace Layers diagram. These included the curve, upper and lower lines, category descriptions, original font, and an inverted colour scheme. 
             <figure>
                 <img src="/assets/images/soas/pace-version.jpg" 
                 alt="The interface with more direct references and features of the Pace layers diagram.">
                 <figcaption>The interface with more direct references and features of the Pace layers diagram.
                 </figcaption>
             </figure>
-            Unfortunately, the combination of curved words and pose tracking was computationally expensive, running at a lower frame rate. I tested several straight-line designs with viewers who had varying knowledge of the Pace layers to find which would best evoke the curve. Bending the line pattern on the top and bottom made these layers feel part of a whole while keeping the centre line straight. The final interface design can be seen below.
+            Unfortunately, the combination of curved words and hand tracking was computationally expensive, running at a lower frame rate. I tested several straight-line designs with viewers who had varying knowledge of the Pace layers to find which would best evoke the curve. Bending the line pattern on the top and bottom made these layers feel part of a whole while keeping the centre lines straight. The final interface design can be seen below.
             <figure>
                 <img src="/assets/images/soas/final.jpg" 
                 alt="The final interface design.">
@@ -194,7 +193,7 @@ permalink: /portfolio/system-of-a-sound
             <span class="l2">F</span><span class="w2">UTURE</span>
         </h2>        
         <p>
-            To finalise the design of the interface, we wanted colours to appear when you interact with the artwork – bringing further dynamism to the systems that form the Birch building. These elements needed to be dynamic but not distract from the primary content. I achieved this by adding circles that expand out when you play notes. They appear, grow, and fade out, accompanying each note the viewer plays.
+            To finalise the design of the interface, we wanted colours to appear when you interact with the artwork – bringing further dynamism to the systems that form the Birch building. These elements needed to be dynamic but not distract from the primary content. I achieved this by adding coloured circles that expand out when you play notes. They appear, grow, and fade out, accompanying each new note the viewer plays.
             <figure>
                 <img src="/assets/images/soas/colours.jpg" 
                 alt="A close up of the coloured circles expanding as a viewer would play new notes.">
@@ -203,7 +202,7 @@ permalink: /portfolio/system-of-a-sound
             </figure>
             As plans grew to share System of a Sound with the press, we needed to improve the starting experience. The software runs entirely in the web browser, needing a button to start the music due to web browsers not allowing music to play automatically. We also needed to cover loading, as the hand-tracking software can take between 1 and 20 seconds to load, depending on Australian internet speeds. The School is also very cognisant of privacy and wanted to display a privacy statement about the camera tracking data. 
             <br><br>
-            I determined a splash screen would be the best way to cover these issues, with a loading display, artwork description, privacy statement, and a continue button that activates the music. Camera tracking requires decent computing power, and the quality depends on the environment and lighting around the viewer. As such, I also developed a second interaction option with the mouse only. The mouse tracking mode gives an alternative method of interaction for those with inappropriate web cam set-ups, privacy concerns, less powerful computers, or accessibility needs.
+            I added a splash screen to cover these issues, with a loading display, artwork description, privacy statement, and a continue button that activates the music. Camera tracking requires decent computing power, and the quality depends on the environment and lighting around the viewer. To provide a more robust interface I developed a mouse only interaction mode. This mode gives an alternative method of interaction for those with inappropriate web cam set-ups, privacy concerns, less powerful computers, or accessibility needs.
             <br><br>
             There are plans for System of a Sound to tour other buildings, with different data inputs and modes of interaction depending on the building. We will also begin observing how interacting with the exhibit changes people’s perceptions of the built environment and surrounding world.
             <figure>
@@ -221,16 +220,14 @@ permalink: /portfolio/system-of-a-sound
         <p>
             The final piece was placed within a fabric dome for the School of Cybernetics Launch Exhibition ‘Australian Cybernetic: a Point Through Time’. It has been wonderful seeing people enter, play, and listen with the piece, interacting with the sound-scape generated from data sources all around them. 
             <br><br>
-            I learned quite a lot over the course of this project. This was my first experience making an interactive interface, and learning p5.js to translate mock-ups from Illustrator to the web has been a great pathway into using more complex JavaScript libraries. 
-            <br><br>
-            This process also made it clear to me that rapid prototyping elements can allow for better decision making. The earlier I tested and shared these prototypes, the faster I got a stable basis to further build on. 
+            I learned a lot over the course of this project, including translating between different artistic visions. This was my first experience making an interactive interface. Learning p5.js to translate mock-ups from Illustrator to the web has been a great pathway into using more complex JavaScript libraries. 
             <figure>
                 <img src="/assets/images/soas/poster.jpg" 
                 alt="Poster showing how different data sources are combined to create the soundscape.">
                 <figcaption>Poster for the artwork designed by Ken Wheeler
                 </figcaption>
             </figure>
-            
+            You can try System of a Sound for yourself <a href="http://systemofasound.herokuapp.com">here</a>, and read Gizmodo's article about it <a href="https://www.gizmodo.com.au/2022/11/anu-ai-music-experience/">here</a>.
             <br><br>
             <strong>Project team:</strong> Josh Andres, Oliver Bown, Charlton Hill, Rodolfo Ocampo, Caroline Pegram, Adrian Schmidt, Justin Shave, Brendan Wright.
             <br>

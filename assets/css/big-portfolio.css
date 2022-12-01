@@ -2,8 +2,8 @@ body {
     margin:0;
     background-color: #eeeeee;
     color: #111111;
-    font-family: 'Helvetica', sans-serif;
-    font-weight: lighter;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-weight:300;
 }
 
 .noselect {
@@ -39,16 +39,16 @@ h1{
 
 figure img{
   width:100%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 figure video{
   width:100%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 p{
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 figcaption{
@@ -83,6 +83,13 @@ figure{
   padding-top: 20px;
   padding-bottom: 20px;
   background-size: cover;
+}
+
+.img-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  align-items: center;
 }
 
 
@@ -139,12 +146,12 @@ figure{
 }
 
 i{
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h2{
   overflow:  hidden;
-  height: calc(var(--scaling)*145px);
+  height: calc(var(--scaling)*150px);
   margin-top: -60px;
   padding-top: 80px;
 }
