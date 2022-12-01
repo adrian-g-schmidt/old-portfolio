@@ -17,6 +17,25 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
+#navbar a.icon {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 90px;
+}
+
+.icon-parent{
+  display: none;
+}
+
+.ham{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
 
 .portfolio-top{
   display: flex;
@@ -59,10 +78,16 @@ body {
   text-align: center;
 }
 
+#links{
+  display:flex; 
+  flex-direction:row; 
+  height:60px
+}
+
 
 /* The navigation bar */
 #navbar {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background: linear-gradient(rgba(238,238,238,1),95%, rgba(238,238,238,0)); */
   background: rgba(238,238,238,1);
   position: fixed; /* Set the navbar to fixed position */
@@ -258,6 +283,12 @@ a{
   }
 }
 
+@media only screen and (min-width: 700px){
+  #navbar #links {
+    display: flex;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   #content{
     position: relative;
@@ -314,5 +345,18 @@ a{
     font-weight: 100;
   }
 
-}
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  #navbar #links {
+    display: none;
+  }
 
+  .icon-parent{
+    display: block;
+  }
+
+  #navbar #links a{
+    background-color: #ddd;
+  }
+
+
+}

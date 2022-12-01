@@ -89,7 +89,7 @@ figure{
 
 /* The navigation bar */
 #navbar {
-  overflow: hidden;
+  /* overflow: hidden; */
   /* background: linear-gradient(rgba(238,238,238,1),95%, rgba(238,238,238,0)); */
   background: rgba(238,238,238,1);
   position: fixed; /* Set the navbar to fixed position */
@@ -184,6 +184,32 @@ a{
   display:  inline-block;
 }
 
+#navbar a.icon {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 90px;
+}
+
+.icon-parent{
+  display: none;
+}
+
+#links{
+  display:flex; 
+  flex-direction:row; 
+  height:60px
+}
+
+.ham{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
 @keyframes slideInFromLeftTop {
   0% {
     transform: translate(-100%, -60%);   
@@ -269,6 +295,18 @@ a{
     padding-right:10%;
   }
 
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  #navbar #links {
+    display: none;
+  }
+
+  .icon-parent{
+    display: block;
+  }
+
+  #navbar #links a{
+    background-color: #ddd;
+  }
 }
 
 

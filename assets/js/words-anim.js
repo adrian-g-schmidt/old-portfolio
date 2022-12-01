@@ -35,3 +35,28 @@ var headings = document.querySelectorAll('h2');
 [].forEach.call(headings, function(head) {
     observer.observe(head);
 });
+
+
+window.onresize = resizeAdjust;
+
+function resizeAdjust(){
+    if (window.matchMedia("(min-width: 700px)").matches) {
+        document.getElementById("links").style.display = "flex"
+    } else {
+        document.getElementById("links").style.display = "none"
+    }       
+    let collapsible = document.getElementsByClassName("collapsible")[0]
+    var content = collapsible.nextElementSibling;
+    content.style.maxHeight = null;
+    collapsible.classList.remove("active")
+    collapsible.innerHTML = "See More Projects";
+}
+
+function hamburger() {
+    var x = document.getElementById("links");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+}
