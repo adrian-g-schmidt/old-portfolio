@@ -288,6 +288,10 @@ a{
     --scaling: 0.5; 
   }
 
+  .img-grid{
+    grid-template-rows: 1fr;
+  }
+
   .tall{
     width: 100%
   }
