@@ -92,7 +92,9 @@ figure{
   align-items: center;
 }
 
-
+.tall{
+  width: 60%
+}
 
 /* The navigation bar */
 #navbar {
@@ -284,6 +286,10 @@ a{
 @media only screen and (max-width: 700px) {
   :root {
     --scaling: 0.5; 
+  }
+
+  .tall{
+    width: 100%
   }
 
   #cover{
