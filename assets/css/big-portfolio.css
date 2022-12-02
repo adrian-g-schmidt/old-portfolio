@@ -311,6 +311,16 @@ a{
     background-image: url('/assets/images/phonons/phonon-banner-plain.jpg');
   }
 
+  
+  figure{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .img-grid{
+    grid-template-columns: 1fr;
+  }
+  
   :root {
     --scaling: 0.5; 
   }
