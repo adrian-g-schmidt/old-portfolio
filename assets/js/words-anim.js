@@ -45,17 +45,22 @@ window.onscroll = function (e) {
     }
 } 
 
+var width=window.innerWidth;
+
 function resizeAdjust(){
-    if (window.matchMedia("(min-width: 700px)").matches) {
-        document.getElementById("links").style.display = "flex"
-    } else {
-        document.getElementById("links").style.display = "none"
-    }       
-    let collapsible = document.getElementsByClassName("collapsible")[0]
-    var content = collapsible.nextElementSibling;
-    content.style.maxHeight = null;
-    collapsible.classList.remove("active")
-    collapsible.innerHTML = "See More Projects";
+    if (window.innerWidth!= width){
+        if (window.matchMedia("(min-width: 700px)").matches) {
+            document.getElementById("links").style.display = "flex"
+        } else {
+            document.getElementById("links").style.display = "none"
+        }       
+        let collapsible = document.getElementsByClassName("collapsible")[0]
+        var content = collapsible.nextElementSibling;
+        content.style.maxHeight = null;
+        collapsible.classList.remove("active")
+        collapsible.innerHTML = "See More Projects";
+        width=window.innerWidth;
+    }
 }
 
 function hamburger() {
