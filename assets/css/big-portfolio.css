@@ -306,9 +306,7 @@ a{
 
 @media only screen and (max-width: 1000px) {
 
-  .phonon-replace{
-    background-image: url('/assets/images/phonons/phonon-banner-plain.jpg');
-  }
+
   #study{
     position: relative;
     top: 60px;
@@ -333,10 +331,6 @@ a{
 }
 
 @media only screen and (max-width: 700px) {
-  .phonon-replace{
-    background-image: url('/assets/images/phonons/phonon-banner-plain.jpg');
-  }
-
   
   figure{
     margin-left: 0px;
@@ -401,7 +395,9 @@ a{
     max-width: 700px;
   }
 
-
+  #phonon-cover{
+    padding-bottom: 200px;
+  }
 }
 
 
