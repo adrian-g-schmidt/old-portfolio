@@ -16,33 +16,6 @@ body {
                                   supported by Chrome, Edge, Opera and Firefox */
 }
 
-@font-face {
-  font-family: "Helvetica";
-  src: url("/assets/fonts/Helvetica-01.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("/assets/fonts/Helvetica-Bold-02.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("/assets/fonts/Helvetica-Light-05.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url("/assets/fonts/Helvetica-LightOblique-06.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
 
 h1{
   font-weight: bold;
@@ -219,7 +192,7 @@ a{
 }
 .w1{
   font-size: calc(var(--scaling) * 50px); 
-  transform: translate(0px, -70%);    
+  transform: translate(0px, -60%);    
   display:  inline-block;
 }
 .l2{
@@ -232,7 +205,7 @@ a{
 
 .w2{
   font-size: calc(var(--scaling) * 50px); 
-  transform: translate(calc(var(--scaling) * 25px), -187%);    
+  transform: translate(calc(var(--scaling) * 25px), -178%);    
   display:  inline-block;
 }
 
@@ -264,22 +237,22 @@ a{
 
 @keyframes slideInFromLeftTop {
   0% {
-    transform: translate(-100%, -70%);   
+    transform: translate(-100%, -60%);   
     opacity: 0; 
   }
   100% {
-    transform: translate(0px, -70%);    
+    transform: translate(0px, -60%);    
     opacity: 1;
   }
 }
 
 @keyframes slideInFromLeftBot {
   0% {
-    transform: translate(-100%, -187%);    
+    transform: translate(-100%, -178%);    
     opacity: 0; 
   }
   100% {
-    transform: translate(calc(var(--scaling) * 25px), -187%);    
+    transform: translate(calc(var(--scaling) * 25px), -178%);    
     opacity: 1;
   }
 }
