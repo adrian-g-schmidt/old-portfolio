@@ -205,7 +205,7 @@ a{
 
 @keyframes slideInFromLeftBot {
   0% {
-    transform: translate(-100%, -187%);    
+    transform: translate(-100%, -178%);   
     opacity: 0; 
   }
   100% {
